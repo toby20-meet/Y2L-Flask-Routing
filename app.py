@@ -18,8 +18,9 @@ def store():
 def about():
 	return render_template('about.html')
 
-@app.route('/cart')
-def cart():
+@app.route('/cart/<String>')
+def cart(String):
+	Add_To_Cart(String)
 	return render_template('cart.html')
 #####################
 
